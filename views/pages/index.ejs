@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container mt-5">
+        <main>
+            <div class="row">
+                <% for(let i = 0; i < posts.data.length; i++){ %>
+
+                <div class="col-md-4">
+                    <div class="p-2 my-2 bg-light rounded-3">
+                        <div class="container-fluid py-5">
+                            <h3 class="fw-bold"><%= posts.data[i].title %></h3>
+                            <p class="col-md-8 fs-6"><%= posts.data[i].content %></p>
+                            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </main>
+
+        <footer><%- include('../partials/footer'); %></footer>
+    </body>
+</html>
